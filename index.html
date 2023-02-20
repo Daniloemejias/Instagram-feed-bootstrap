@@ -23,7 +23,9 @@
             </div>
             <!--Create a post-->
             <div class="col d-flex flex-row justify-content-end align-items-center p-3">
-                <button type="button" class="btn btn-success btn-lg p-1" href="#feed" data-toggle="Feed">Create a new post</button>
+                <button type="button" class="btn btn-success btn-lg p-1" href="#feed" data-toggle="modal">Create
+                    a new 
+                    post</button>
 
                 <!--Configuracion-->
                 <ul class="nav nav-pills">
@@ -32,11 +34,11 @@
                         aria-haspopup="true" aria-expanded="false"><i class="fas fa-cog pageheader"></i></a>
                     <li class="nav-item dropdown"></li>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Profile</a>
+                        <a class="dropdown-item" href="#">Accesibility</a>
+                        <a class="dropdown-item" href="#">Privacy and Data</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Log Out</a>
+                        <a class="dropdown-item text-danger" href="#">Log Out</a>
                     </div>
 
             </div>
@@ -44,13 +46,15 @@
         </div><!--row bg-light px-5-->
 
         <!--Modal-->
-        <div class="modal" id="my-modal" tabindex="-1">
+        <div class="modal" id="feed" tabindex="-1">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body">
                         <form>
                             <div class="form-group my-2">
-                                <textarea class="form-control" id="message-text"></textarea>
+                                <h1>Create a new post</h1>
+                                <p><strong>Caption:</strong></p>
+                                <textarea class="form-control" id="message-text" placeholder="Add the caption of your post here"></textarea>
                             </div>
                         </form>
                         <button type="button" class="btn btn-outline-secondary p-1"><i
@@ -66,6 +70,322 @@
             </div>
         </div>
 
+    </div>
+
+    <div class="container-fluid p-0">
+        <!--Modificador-->
+        <ul class="nav nav-pills mb-2 justify-content-center" id="pills-tab" role="tablist">
+            <li class="nav-item feedmode">
+                <a class="nav-link active" id="pills-grilla-tab" data-toggle="pill" href="#pills-grilla" role="tab"
+                    aria-controls="pills-grilla" aria-selected="true"><i class="fas fa-th"></i></a>
+            </li>
+            <li class="nav-item feedmode">
+                <a class="nav-link" id="pills-cascada-tab" data-toggle="pill" href="#pills-cascada" role="tab"
+                    aria-controls="pills-cascada" aria-selected="false"><i class="fas fa-square"></i></a>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-grilla" role="tabpanel" aria-labelledby="pills-grilla-tab">
+                <div class="row d-flex flex-nowrap">
+                    <div class="col 4 p-0 m-2"><img
+                        src="https://picsum.photos/id/36/500/500"
+                        class="img-fluid"></img></div>
+                    <div class="col 4 p-0 m-2"><img
+                        src="https://picsum.photos/id/40/500/500"
+                        class="img-fluid"></img></div>
+                <div class="col 4 p-0 m-2"><img
+                        src="https://picsum.photos/id/43/500/500"
+                        class="img-fluid"></img></div>
+            </div>
+            <div class="row d-flex flex-nowrap">
+                <div class="col p-0 m-2"><img
+                        src="https://picsum.photos/id/58/500/500"
+                        class="img-fluid"></img></div>
+                <div class="col p-0 m-2"><img
+                        src="https://picsum.photos/id/60/500/500"
+                        class="img-fluid"></img></div>
+                <div class="col p-0 m-2"><img
+                        src="https://picsum.photos/id/73/500/500"
+                        class="img-fluid"></img></div>
+            </div>
+            <div class="row d-flex flex-nowrap">
+                <div class="col p-0 m-2"><img
+                        src="https://picsum.photos/id/84/500/500"
+                        class="img-fluid"></img></div>
+                <div class="col p-0 m-2"><img
+                        src="https://picsum.photos/id/88/500/500"
+                        class="img-fluid"></img></div>
+                <div class="col p-0 m-2"><img
+                        src="https://picsum.photos/id/91/500/500"
+                        class="img-fluid"></img></div>
+            </div>
+    </div>
+    <<div class="tab-pane fade" id="pills-cascada" role="tabpanel" aria-labelledby="pills-cascada-tab">
+        <div class="col d-flex flex-wrap justify-content-center">
+            <div class="card mb-5" style="width: 60%;">
+                <!-- post 1-->
+                <div class="card-header d-flex p-1 justify-content-between bg-white align-items-baseline">
+                    <h5 class="card-title">My first photo</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">12/14</h6>
+                </div>
+                <div class="card-body-fluid m-auto">
+                    <img src="https://picsum.photos/id/36/500/500"
+                        class="img-fluid"></img>
+                </div>
+                <div class="card-footer p-3 bg-white">
+                    <p class="card-text">23 likes</p>
+                </div>
+                <div class="px-3">
+                    <p>This is my first photo of the feed. This is a multi line comment for
+                        testing purposes. I am learning to code with #BreatheCode.</p>
+                </div>
+                <div class="col d-flex bd-highlight mb-0 container-fluid px-3 align-items-baseline">
+                    <div class="pr-2 bd-highlight">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="px-2 bd-highlight">
+                        <p class="text-muted">Comment...</p>
+                    </div>
+                    <div class="ml-auto p-2 bd-highlight">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card mb-5" style="width: 60%;">
+                <!-- post 2-->
+                <div class="card-header d-flex p-1 justify-content-between bg-white align-items-baseline">
+                    <h5 class="card-title">My first photo</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">12/14</h6>
+                </div>
+                <div class="card-body-fluid m-auto">
+                    <img src="https://picsum.photos/id/40/500/500"
+                        class="img-fluid"></img>
+                </div>
+                <div class="card-footer p-3 bg-white">
+                    <p class="card-text">23 likes</p>
+                </div>
+                <div class="px-3">
+                    <p>This is my first photo of the feed. This is a multi line comment for
+                        testing purposes. I am learning to code with #BreatheCode.</p>
+                </div>
+                <div class="col d-flex bd-highlight mb-0 container-fluid px-3 align-items-baseline">
+                    <div class="pr-2 bd-highlight">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="px-2 bd-highlight">
+                        <p class="text-muted">Comment...</p>
+                    </div>
+                    <div class="ml-auto p-2 bd-highlight">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card mb-5" style="width: 60%;">
+                <!-- post 3-->
+                <div class="card-header d-flex p-1 justify-content-between bg-white align-items-baseline">
+                    <h5 class="card-title">My first photo</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">12/14</h6>
+                </div>
+                <div class="card-body-fluid m-auto">
+                    <img src="https://picsum.photos/id/43/500/500"
+                        class="img-fluid"></img>
+                </div>
+                <div class="card-footer p-3 bg-white">
+                    <p class="card-text">23 likes</p>
+                </div>
+                <div class="px-3">
+                    <p>This is my first photo of the feed. This is a multi line comment for
+                        testing purposes. I am learning to code with #BreatheCode.</p>
+                </div>
+                <div class="col d-flex bd-highlight mb-0 container-fluid px-3 align-items-baseline">
+                    <div class="pr-2 bd-highlight">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="px-2 bd-highlight">
+                        <p class="text-muted">Comment...</p>
+                    </div>
+                    <div class="ml-auto p-2 bd-highlight">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-5" style="width: 60%;">
+                <!-- post 4-->
+                <div class="card-header d-flex p-1 justify-content-between bg-white align-items-baseline">
+                    <h5 class="card-title">My first photo</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">12/14</h6>
+                </div>
+                <div class="card-body-fluid m-auto">
+                    <img src="https://picsum.photos/id/58/500/500"
+                        class="img-fluid"></img>
+                </div>
+                <div class="card-footer p-3 bg-white">
+                    <p class="card-text">23 likes</p>
+                </div>
+                <div class="px-3">
+                    <p>This is my first photo of the feed. This is a multi line comment for
+                        testing purposes. I am learning to code with #BreatheCode.</p>
+                </div>
+                <div class="col d-flex bd-highlight mb-0 container-fluid px-3 align-items-baseline">
+                    <div class="pr-2 bd-highlight">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="px-2 bd-highlight">
+                        <p class="text-muted">Comment...</p>
+                    </div>
+                    <div class="ml-auto p-2 bd-highlight">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-5" style="width: 60%;">
+                <!-- post 5-->
+                <div class="card-header d-flex p-1 justify-content-between bg-white align-items-baseline">
+                    <h5 class="card-title">My first photo</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">12/14</h6>
+                </div>
+                <div class="card-body-fluid m-auto">
+                    <img src="https://picsum.photos/id/60/500/500"
+                        class="img-fluid"></img>
+                </div>
+                <div class="card-footer p-3 bg-white">
+                    <p class="card-text">23 likes</p>
+                </div>
+                <div class="px-3">
+                    <p>This is my first photo of the feed. This is a multi line comment for
+                        testing purposes. I am learning to code with #BreatheCode.</p>
+                </div>
+                <div class="col d-flex bd-highlight mb-0 container-fluid px-3 align-items-baseline">
+                    <div class="pr-2 bd-highlight">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="px-2 bd-highlight">
+                        <p class="text-muted">Comment...</p>
+                    </div>
+                    <div class="ml-auto p-2 bd-highlight">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-5" style="width: 60%;">
+                <!-- post 6-->
+                <div class="card-header d-flex p-1 justify-content-between bg-white align-items-baseline">
+                    <h5 class="card-title">My first photo</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">12/14</h6>
+                </div>
+                <div class="card-body-fluid m-auto">
+                    <img src="https://picsum.photos/id/73/500/500"
+                        class="img-fluid"></img>
+                </div>
+                <div class="card-footer p-3 bg-white">
+                    <p class="card-text">23 likes</p>
+                </div>
+                <div class="px-3">
+                    <p>This is my first video of the feed. This is a multi line comment for
+                        testing purposes. I am learning to code with #BreatheCode.</p>
+                </div>
+                <div class="col d-flex bd-highlight mb-0 container-fluid px-3 align-items-baseline">
+                    <div class="pr-2 bd-highlight">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="px-2 bd-highlight">
+                        <p class="text-muted">Comment...</p>
+                    </div>
+                    <div class="ml-auto p-2 bd-highlight">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-5" style="width: 60%;">
+                <!-- post 7 start-->
+                <div class="card-header d-flex p-1 justify-content-between bg-white align-items-baseline">
+                    <h5 class="card-title">My first photo</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">12/14</h6>
+                </div>
+                <div class="card-body-fluid m-auto">
+                    <img src="https://picsum.photos/id/84/500/500"
+                        class="img-fluid"></img>
+                </div>
+                <div class="card-footer p-3 bg-white">
+                    <p class="card-text">23 likes</p>
+                </div>
+                <div class="px-3">
+                    <p>This is my first photo of the feed. This is a multi line comment for
+                        testing purposes. I am learning to code with #BreatheCode.</p>
+                </div>
+                <div class="col d-flex bd-highlight mb-0 container-fluid px-3 align-items-baseline">
+                    <div class="pr-2 bd-highlight">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="px-2 bd-highlight">
+                        <p class="text-muted">Comment...</p>
+                    </div>
+                    <div class="ml-auto p-2 bd-highlight">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-5" style="width: 60%;">
+                <!-- post 8 -->
+                <div class="card-header d-flex p-1 justify-content-between bg-white align-items-baseline">
+                    <h5 class="card-title">My first photo</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">12/14</h6>
+                </div>
+                <div class="card-body-fluid m-auto">
+                    <img src="https://picsum.photos/id/88/500/500"
+                        class="img-fluid"></img>
+                </div>
+                <div class="card-footer p-3 bg-white">
+                    <p class="card-text">23 likes</p>
+                </div>
+                <div class="px-3">
+                    <p>This is my first photo of the feed. This is a multi line comment for
+                        testing purposes. I am learning to code with #BreatheCode.</p>
+                </div>
+                <div class="col d-flex bd-highlight mb-0 container-fluid px-3 align-items-baseline">
+                    <div class="pr-2 bd-highlight">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="px-2 bd-highlight">
+                        <p class="text-muted">Comment...</p>
+                    </div>
+                    <div class="ml-auto p-2 bd-highlight">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-5" style="width: 60%;">
+                <!-- post 9-->
+                <div class="card-header d-flex p-1 justify-content-between bg-white align-items-baseline">
+                    <h5 class="card-title">My first photo</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">12/14</h6>
+                </div>
+                <div class="card-body-fluid m-auto">
+                    <img src="https://picsum.photos/id/91/500/500"
+                        class="img-fluid"></img>
+                </div>
+                <div class="card-footer p-3 bg-white">
+                    <p class="card-text">23 likes</p>
+                </div>
+                <div class="px-3">
+                    <p>This is my first photo of the feed. This is a multi line comment for
+                        testing purposes. I am learning to code with #BreatheCode.</p>
+                </div>
+                <div class="col d-flex bd-highlight mb-0 container-fluid px-3 align-items-baseline">
+                    <div class="pr-2 bd-highlight">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="px-2 bd-highlight">
+                        <p class="text-muted">Comment...</p>
+                    </div>
+                    <div class="ml-auto p-2 bd-highlight">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
